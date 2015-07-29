@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Redirects users to a pre-defined page when zero-hit search
+ * results are reached in a way different from using
+ * search form.
+ */
+
+/**
+ * Implements hook_preprocess_THEME().
+ */
+function easyddb_zerohit_redirect_page_alter(&$page) {
+  $search_page = arg(0) == 'search' && arg(1) == 'ting';
+
+  if ($search_page && isset($_GET['source']) && $_GET['source'] == 'external') {
+    $search_results = drupal_static('ting_search_results');
+    if (!isset($search_results->numTotalObjects) || !$search_results->numTotalObjects) {
+      drupal_goto('no_results/search/' . arg(2));
+    }
+  }
+}

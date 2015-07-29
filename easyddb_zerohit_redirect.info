@@ -1,0 +1,6 @@
+name = easyDDB ZeroHit Redirect
+description = Redirect users when zero-hit search is reached.
+version = 7.x-0.1
+core = 7.x
+package= easyDDB
+features[features_api][] = api:2
