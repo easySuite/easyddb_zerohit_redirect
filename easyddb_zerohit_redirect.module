@@ -6,8 +6,10 @@
  * search form.
  */
 
+include_once 'easyddb_zerohit_redirect.features.inc';
+
 /**
- * Implements hook_preprocess_THEME().
+ * Implements hook_page_alter().
  */
 function easyddb_zerohit_redirect_page_alter(&$page) {
   $search_page = arg(0) == 'search' && arg(1) == 'ting';
