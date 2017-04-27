@@ -1,12 +1,14 @@
 name = easyDDB ZeroHit Redirect
 description = Redirect users when zero-hit search is reached.
 core = 7.x
-package = easyDDB
+package = easyOPAC
 version = 7.x-2.2.0+easy
 project = easyddb_zerohit_redirect
 dependencies[] = ctools
+dependencies[] = ding_bibliotek_info
+dependencies[] = easyddb_frontend_layout
 dependencies[] = page_manager
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:2
 features[page_manager_pages][] = zero_search_result_hit
-mtime = 1438075707
+mtime = 1465368740
