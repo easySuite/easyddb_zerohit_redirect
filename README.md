@@ -1,4 +1,4 @@
-easyDDB ZeroHit Redirect
+easyOPAC ZeroHit Redirect
 ==========
 
 Redirect users when zero-hit search is reached.
